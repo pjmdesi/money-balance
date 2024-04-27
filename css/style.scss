@@ -1,0 +1,158 @@
+//
+body {
+	font-family: 'Helvetica', Helvetica, sans-serif;
+	font-size: 45px;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+}
+
+body * {
+	border: 0px solid black;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 100%;
+	font-weight: 900;
+	line-height: 60px;
+}
+
+h2 {
+	font-size: 75%;
+}
+
+h3 {
+
+}
+
+#body {
+	width: 100%;
+	max-width: 500px;
+	min-width: 300px;
+	margin: auto;
+	padding: 50px 0;
+}
+
+#temp {
+	display: none !important;
+}
+
+table {
+	width: 100%;
+	thead {
+		.header {
+			display: inline-block;
+			width: 50%;
+		}
+		tr {
+			margin-bottom: 25px;
+		}
+	}
+	input {
+		font-family: 'Consolas', monospace;
+		font-size: 30px;
+		display: block;
+		padding: 1px 8px 4px;
+		width: 100%;
+		height: 100%;
+		outline: none;
+	}
+	.delButton {
+		margin-right: -15.55px;
+		height: 100%;
+		position: relative;
+		left: -25.55px;
+		color: #555;
+		font-size: 20px;
+		line-height: 44px;
+		cursor: pointer;
+		user-select: none;
+	}
+	.entry {
+		font-family: 'Consolas', monospace;
+		text-align: right;
+		input {
+			&::placeholder, &:after {
+				color: #d55;
+			}
+			&:after {
+				content: '$';
+				position: absolute;
+				display: inline-block;
+				left: 10px;
+				top: 5px;
+				width: 10px;
+				height: 20px;
+			}
+			box-sizing: border-box;
+			background-color: #fdd;
+			color: #d00;
+			border: 2px solid #d66;
+			border-bottom-width: 0px;
+			border-radius: 0 0 0 0;
+			text-align: right;
+		}
+	}
+	.label {
+		input {
+			&::placeholder {
+				color: #55d;
+			}
+			background-color: #ddf;
+			color: #00d;
+			border: 2px solid #66d;
+			border-bottom-width: 0px;
+			border-right-width: 0px;
+			border-radius: 0 0 0 0;
+		}
+	}
+	tr {
+		display: flex;
+		&:first-child {
+			.delButton{
+				opacity: 0;
+				pointer-events: none;
+			}
+			.entry>input {
+				border-top-right-radius: 8px;
+			}
+			.label>input {
+				border-top-left-radius: 8px;
+			}
+		}
+		&:last-child {
+			.entry>input {
+				padding-top: 2px;
+				border-bottom-width: 2px;
+				border-bottom-right-radius: 8px;
+			}
+			.label>input {
+				padding-top: 2px;
+				border-bottom-width: 2px;
+				border-bottom-left-radius: 8px;
+			}
+		}
+	}
+}
+
+button {
+	font-family: 'Helvetica', Helvetica, sans-serif;
+	display: block;
+	padding: 0 10px;
+	box-sizing: border-box;
+	border: 0;
+	outline: none;
+	border-radius: 8px;
+	margin: 10px auto;
+	background: black;
+	height: 50px;
+	color: white;
+	font-weight: 900;
+	font-size: 25px;
+	width: 50px;
+	&#clearButton {
+		display: inline;
+		float: right;
+	}
+}

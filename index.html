@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hi Puppy ❤️</title>
+		<link rel="stylesheet" href="/css/reset.css">
+		<link rel="stylesheet" href="/css/style.min.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="body">
+			<h1>puppy.cash
+				<button type="button" name="button" id="clearButton">↺</button>
+			</h1>
+			<br>
+			<table>
+				<thead>
+					<tr>
+						<td class="header label">
+							<h2>Total</h2>
+						</td>
+						<td class="header entry">
+							<h2>$<span id="budgetAmount" bud="375"></span>
+							</h2>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="entryRow" id="ER1">
+						<td class="delButton">🞪</td>
+						<td class="label"><input type="text" name="" value="" placeholder="Name"></td>
+						<td class="entry"><input type="number" name="" value="" placeholder="0"></td>
+					</tr>
+				</tbody>
+			</table>
+			<button type="button" name="button" id="addButton">+</button>
+		</div>
+		<form action="fieldData.php" method="POST">
+  <fieldset>
+    <legend>Add to log</legend>
+    <p>
+      Message:
+      <textarea name="message"></textarea>
+    </p>
+    <p>
+      <input type="submit" value="SAVE" />
+    </p>
+  </fieldset>
+</form>
+	</body>
+</html>
